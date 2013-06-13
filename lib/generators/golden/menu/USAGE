@@ -1,0 +1,16 @@
+Description:
+    It will generate migration, configuration and helper for use.
+
+Example:
+    rails generate golden:menu:install
+
+    This will create/modify:
+        db/migrate/20130613082608_create_golden_menus.rb
+        db/migrate/20130613082609_create_golden_menu_resources.rb
+        config/initializers/golden_menu.rb
+        config/application.rb
+        config/locales/golden/menus.en.yml
+        config/locales/golden/menus.zh-TW.yml
+        config/routes.rb
+        app/controllers/application_controller.rb
+        app/helpers/golden/menu/menu_resources_helper.rb

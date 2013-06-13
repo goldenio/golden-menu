@@ -1,0 +1,20 @@
+<article>
+  <header>
+    <h1><%= t('.title') %></h1>
+  </header>
+
+  <%= render_list class: 'nav nav-tabs' do |li|
+    if can? :index, Golden::Menu::HierarchicalMenu
+      li << [link_to(t('.index'), hierarchical_menus_path), { class: 'pull-right' }]
+    end
+    if can? :new, Golden::Menu::HierarchicalMenu
+      li << [link_to(t('helpers.new'), new_hierarchical_menu_path), { class: 'pull-right' }]
+    end
+  end %>
+
+  <%= render 'table', menus: @menus %>
+  <%= render 'application/pagination', collection: @menus %>
+
+  <footer>
+  </footer>
+</article>

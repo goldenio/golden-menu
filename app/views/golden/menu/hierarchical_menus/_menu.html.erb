@@ -1,0 +1,22 @@
+<section>
+  <p>
+    <b><%= Golden::Menu::HierarchicalMenu.human_attribute_name :group %>:</b>
+    <%= menu.translated_group %>
+  </p>
+  <p>
+    <b><%= Golden::Menu::HierarchicalMenu.human_attribute_name :name %>:</b>
+    <%= menu.name %>
+  </p>
+  <p>
+    <b><%= Golden::Menu::HierarchicalMenu.human_attribute_name :description %>:</b>
+    <%= menu.description %>
+  </p>
+  <p>
+    <b><%= Golden::Menu::HierarchicalMenu.human_attribute_name :parent %>:</b>
+    <%= menu.parent.try :name %>
+  </p>
+  <p>
+    <b><%= Golden::Menu::HierarchicalMenu.human_attribute_name :menu_resource_counts %>:</b>
+    <%= menu.menu_resources.count %>
+  </p>
+</section>

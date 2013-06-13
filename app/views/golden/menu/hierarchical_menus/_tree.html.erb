@@ -1,0 +1,3 @@
+<%= content_tag :ol, class: 'sortable_tree', 'data-max_levels' => 5, 'data-rebuild_url' => rebuild_hierarchical_menus_url do
+  sortable_tree menus, title: :name_and_group
+end %>

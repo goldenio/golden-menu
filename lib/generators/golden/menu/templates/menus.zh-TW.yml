@@ -1,0 +1,6 @@
+zh-TW:
+  golden:
+    menu:
+      groups:
+        header: '頁首'
+        sidebar: '側欄'

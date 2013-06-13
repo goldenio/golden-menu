@@ -1,0 +1,36 @@
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th><%= Golden::Menu::HierarchicalMenu.human_attribute_name :group %></th>
+      <th><%= Golden::Menu::HierarchicalMenu.human_attribute_name :name %></th>
+      <th><%= Golden::Menu::HierarchicalMenu.human_attribute_name :description %></th>
+      <th><%= Golden::Menu::HierarchicalMenu.human_attribute_name :parent %></th>
+      <th><%= Golden::Menu::HierarchicalMenu.human_attribute_name :menu_resource_counts %></th>
+      <th><%= t('helpers.actions') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% menus.each do |menu| %>
+      <tr>
+        <td><%= menu.translated_group %></td>
+        <td><%= menu.name %></td>
+        <td><%= menu.description %></td>
+        <td><%= menu.parent.try :name %></td>
+        <td><%= menu.menu_resources.count %></td>
+        <td>
+          <%= render_btn_group do |btn|
+            if can? :show, menu
+              btn << link_to_show(menu)
+            end
+            if can? :edit, menu
+              btn << link_to_edit([:edit, menu])
+            end
+            if can? :destroy, menu
+              btn << link_to_destroy(menu)
+            end
+          end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

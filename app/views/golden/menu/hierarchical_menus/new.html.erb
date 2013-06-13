@@ -1,0 +1,24 @@
+<article>
+  <header>
+    <h1><%= t('.title') %></h1>
+  </header>
+
+  <%= render_list class: 'nav nav-tabs' do |li|
+    if can? :index, Golden::Menu::HierarchicalMenu
+      li << [link_to(t('helpers.index'), hierarchical_menus_path), { class: 'pull-right' }]
+    end
+  end %>
+
+  <div>
+    <%= simple_form_for @menu, as: :menu do |f| %>
+      <%= f.error_notification %>
+      <%= render 'form', f: f %>
+      <div class="form-actions">
+        <%= submit_button f %>
+      </div>
+    <% end %>
+  </div>
+
+  <footer>
+  </footer>
+</article>

@@ -1,0 +1,50 @@
+en:
+  golden:
+    menu:
+      hierarchical_menus:
+        edit:
+          title: 'Editing menu'
+        index:
+          title: 'Menus'
+          list: 'Listing menus'
+        new:
+          title: 'New menu'
+        show:
+          title: 'Menu - %{name}'
+        list:
+          title: 'Listing menus'
+          index: 'Menus'
+
+  activerecord:
+    models:
+      golden/menu/hierarchical_menu: 'Menu'
+    attributes:
+      golden/menu/hierarchical_menu:
+        url: 'Url'
+        group: 'Group'
+        name: 'Name'
+        description: 'Description'
+        resource_url: 'Resource URL'
+        parent: 'Parent'
+        lft: 'Lft'
+        rgt: 'Rgt'
+        depth: 'Depth'
+        menu_resources: 'Menu items'
+        menu_resource_counts: 'Menu items count'
+
+  simple_form:
+    labels:
+      golden_menu/hierarchical_menu:
+    hints:
+      golden_menu/hierarchical_menu:
+      menu:
+        group: 'Only root menus (blank parent) need to choose a group'
+        resource_url: 'fill redirect URL while click menu'
+    placeholders:
+      golden_menu/hierarchical_menu:
+
+  helpers:
+    submit:
+      golden_menu/hierarchical_menu:
+        create: 'Create %{model}'
+        update: 'Update %{model}'

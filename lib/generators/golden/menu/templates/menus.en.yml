@@ -1,0 +1,6 @@
+en:
+  golden:
+    menu:
+      groups:
+        header: 'Header'
+        sidebar: 'Sidebar'

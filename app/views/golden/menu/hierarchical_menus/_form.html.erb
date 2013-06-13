@@ -1,0 +1,14 @@
+<div class="form-inputs">
+  <%= f.input :group,
+    as: :select,
+    collection: golden_menu_groups,
+    input_html: { class: 'chzn-select' } %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.association :parent,
+    collection: nested_set_options(Golden::Menu::HierarchicalMenu) { |menu|
+      "#{'-' * menu.level} #{menu.name}"
+    },
+    input_html: { class: 'chzn-select' } %>
+  <%= f.input :resource_url %>
+</div>
