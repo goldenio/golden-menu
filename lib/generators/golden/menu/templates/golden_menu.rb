@@ -8,4 +8,7 @@ Golden::Menu.configure do |config|
   #config.translate_group_block = lambda do |group|
   #  I18n.t(group, scope: 'golden.menu.groups')
   #end
+
+  # Add more allowed fields for strong paramters.
+  #config.permitted_fields += []
 end

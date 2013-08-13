@@ -17,7 +17,7 @@
         <td><%= menu.description %></td>
         <td><%= menu.parent.try :name %></td>
         <td><%= menu.menu_resources.count %></td>
-        <td>
+        <td class="actions">
           <%= render_btn_group do |btn|
             if can? :show, menu
               btn << link_to_show(menu)

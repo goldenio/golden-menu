@@ -11,6 +11,11 @@ module Golden
       I18n.t(group, scope: 'golden.menu.groups')
     }
 
+    mattr_accessor :permitted_fields
+    @@permitted_fields = [
+      :group, :name, :description, :parent_id, :resource_url, :memu_ids
+    ]
+
     def self.configure
       yield self
     end

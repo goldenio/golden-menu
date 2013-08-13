@@ -7,8 +7,7 @@ The `golden-menu` creates menus by building a hierarchiacal tree first and linki
 For Rails 4 project, `Gemfile` should have
 
 ```ruby
-gem 'protected_attributes'
-gem 'devise', '~> 3.0.0.rc'
+gem 'devise', '> 3.0'
 gem 'cancan'
 gem 'simple_form', '~> 3.0.0.rc'
 gem 'anjlab-bootstrap-rails', require: 'bootstrap-rails'

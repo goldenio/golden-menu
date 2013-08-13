@@ -3,8 +3,6 @@ class Golden::Menu::HierarchicalMenu < ActiveRecord::Base
 
   self.table_name = 'golden_menus'
 
-  attr_accessible :group, :name, :description, :parent_id, :resource_url
-
   validates :name, presence: true
   validates :url, format: { with: /\A([\w\-]{3,})\z/ }, allow_blank: true
 
