@@ -38,6 +38,7 @@ zh-TW:
     hints:
       golden_menu_hierarchical_menu:
       menu:
+        name: '僅限用英文字母（不限大小寫）、阿拉伯數字、底線（_）和破折號（-），至少三個字元'
         group: '只有最頂層的選單（父層為空者）需要選擇群組'
         resource_url: '可選填點擊時連結的網址'
     placeholders:

@@ -38,6 +38,7 @@ en:
     hints:
       golden_menu/hierarchical_menu:
       menu:
+        name: 'Only characters, numbers and, - are allowed. Minimal 3 characters requied.'
         group: 'Only root menus (blank parent) need to choose a group'
         resource_url: 'fill redirect URL while click menu'
     placeholders:
