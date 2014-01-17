@@ -13,7 +13,11 @@ module Golden
 
     mattr_accessor :permitted_fields
     @@permitted_fields = [
-      :group, :name, :description, :parent_id, :resource_url, :memu_ids
+      :group, :name, :description, :parent_id, :resource_url
+    ]
+
+    mattr_accessor :hierarchical_menu_modules
+    @@hierarchical_menu_modules = [
     ]
 
     def self.configure

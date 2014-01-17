@@ -30,4 +30,6 @@ class Golden::Menu::HierarchicalMenu < ActiveRecord::Base
   def translated_group
     ::Golden::Menu.translate_group group
   end
+
+  Golden::Menu.hierarchical_menu_modules.each { |module_name| include module_name }
 end
